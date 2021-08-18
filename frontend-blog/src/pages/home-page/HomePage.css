@@ -1,50 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@200&family=Roboto:ital,wght@1,100&display=swap");
 
-/* root styling */
-
-:root {
-  --light: #f8f9fa;
-  --secondary: #adb5bd;
-  --dark: #343a40;
-  --primary-color: #f15bb5;
-  --secondary-color: #2ec4b6;
-  --border: #e9ecef;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-* > * {
-  box-sizing: border-box;
-}
-
-/* global styling */
-.text-light {
-  color: var(--light);
-}
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-dark {
-  color: var(--dark);
-}
-
-.text-primary {
-  color: var(--dark);
-}
-
-.bg-light {
-  background-color: var(--light);
-}
-
 .container {
   max-width: 1200px;
   padding: 0 15px;
@@ -292,26 +247,6 @@ a {
   font-family: "Poppins", sans-serif;
 }
 /*-----------.article Page-----*/
-
-/*----------footer-----------*/
-#footer {
-  padding-top: 4em;
-}
-#footer .feature-post .flex-item {
-  margin-bottom: 10px;
-}
-
-#footer .tags a {
-  border-radius: 40px;
-  padding: 10px 20px;
-  font-size: 15px;
-}
-
-#footer .copyrights {
-  padding: 10px 0;
-  border-top: 2px solid var(--light);
-}
-/*----------footer-----------*/
 
 /* Media Query */
 
