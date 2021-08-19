@@ -1,18 +1,23 @@
 const { ApolloServer, gql } = require('apollo-server');
 
 const typeDefs = gql`
+  scalar DateTime
+  
   type Blog {
     title: String
     image: String
     description: String
     genre: String 
     date: String
+    genre: String
+    description: String
     comments: [Comment]
   }
 
   type Comment {
     author: User
     message: String
+    time: DateTime
   }
 
   type User {

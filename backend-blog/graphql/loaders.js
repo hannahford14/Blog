@@ -62,7 +62,8 @@ const createUser = (root, {}) => {
 const getBlog = async (root, {}) => {
   let db = await pool.acquire();
   try {
-     return await db.query(`SELECT * FROM Blog`).all(); 
+    let result = await db.query(`SELECT * FROM Blog`).one();
+    return result; 
   } catch (err) {
     logError(err);
     throw userFriendlyUnexpectedError();
