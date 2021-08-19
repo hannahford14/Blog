@@ -1,14 +1,9 @@
 const { RecordID } = require('orientjs');
-var OrientDB = require('orientjs');
+const { OrientDBConnectionPool } = require("../orientDBConnectionPool");
 
-let server = OrientDB({
-              host: 'localhost',
-              port: '2424',
-              username: 'root',
-              password: 'root'
-            });
+const pool = new OrientDBConnectionPool();
+pool.connect(); // connecting to the database
 
-let db = server.use('HannahsBlog');
 
 const createBlog = (root, {}) => {
   try{
@@ -64,21 +59,15 @@ const createUser = (root, {}) => {
   }
 }
 
-const getBlog = (root, {}) => {
-  try{
-    // let query = `SELECT * FROM BLOG WHERE title=:parameter1`;
-
-    // let result = db.query(query, 
-    //   {
-    //     params: {
-    //       parameter1: "BLOG"
-    //     }
-    //   }
-    // );
-
-    // return result;
+const getBlog = async (root, {}) => {
+  let db = await pool.acquire();
+  try {
+     return await db.query(`SELECT * FROM Blog`).all(); 
   } catch (err) {
-    console.log("Create Blog: ", err);
+    logError(err);
+    throw userFriendlyUnexpectedError();
+  } finally {
+    await db.close();
   }
 }
 
