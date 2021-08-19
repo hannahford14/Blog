@@ -4,6 +4,8 @@ const typeDefs = gql`
   type Blog {
     title: String
     image: String
+    description: String
+    genre: String 
     date: String
     comments: [Comment]
   }

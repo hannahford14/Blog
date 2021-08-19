@@ -6,6 +6,7 @@ import { ApolloProvider } from "react-apollo";
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Blog from './pages/blog-page/BlogPage';
 import Home from './pages/home-page/HomePage';
+import Login from './pages/login-page/LoginPage';
 
 
 const client = new ApolloClient({
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" name="Home Page" component={Home}/>
         <Route exact path="/blog" name="blog" component={Blog}/>
+        <Route exact path="/login" name="blog" component={Login}/>
       </Switch>
     </HashRouter>
   </ApolloProvider>,

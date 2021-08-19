@@ -1,0 +1,43 @@
+.initials {
+  position: relative;
+  top: 25px; /* 25% of parent */
+  font-size: 50px; /* 50% of parent */
+  line-height: 50px; /* 50% of parent */
+  color: #fff;
+  font-weight: bold;
+}
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(138, 240, 120);
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.large {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  position: inherit;
+  z-index: 1;
+}
+
+.border {
+  border: 1px;
+}
+
+.button-reply {
+  text-align: right;
+  position: absolute;
+  right: 0;
+}
+
+.form-control-comment {
+  width: 100%;
+  border: 2px solid var(--border);
+  padding: 1em;
+  font-size: 18px;
+  margin-right: 10px;
+  font-family: "Poppins", sans-serif;
+}

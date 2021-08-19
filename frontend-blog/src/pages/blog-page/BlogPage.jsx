@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import Comments from '../../components/comments/Comments';
 import img15 from '../../photos/hair.jpg'; 
 import img16 from '../../photos/decor.jpg'; 
 import img17 from '../../photos/makeup.jpg'; 
@@ -10,6 +11,14 @@ import img20 from '../../photos/image.png';
 import img21 from '../../photos/sample-profile-pic.png'; 
 
 class BlogPage extends Component {
+  submit = () => {
+    console.log(document.getElementById("getCommentFName").value);
+    console.log(document.getElementById("getCommentLName").value);
+    console.log(document.getElementById("getCommentEmail").value);
+    console.log(document.getElementById("getCommentMessage").value);
+    
+  }
+
   render(){
     return (
       <div>
@@ -100,46 +109,55 @@ class BlogPage extends Component {
        <div className="post-comments py-2 container">
         <h3 className="text-center display-1 secondary-title py-2">5 comments</h3>
         <div className="comment-details">
-          <div className="comment-item py-2">
-            <div className="d-flex">
-              <div className="avatar px-2">
-                <img src={img20} className="rounded" alt=""/>
-              </div>
-               <div className="comment-content">
-                 <h5 className="display-2 m-0">Jane Do</h5>
-                 <p className="title-secondary text-dark">
-                   Lorem ipsum dolor sit amet consectetur adipisicing.
-                 </p>
-               </div> 
-              
+         
           
-          </div>
+
+          <Comments
+                  
+                  firstName="Bella"
+                  lastName = "Hadid"
+                  message= "This is my comment for the blog "
+                  date = "Wed 03, 2021"
+                />
+          <Comments
+                  
+                  firstName="John"
+                  lastName = "Doe"
+                  message= "This is my comment for the blog "
+                  date = "Wed 03, 2021"
+                />
+                <Comments
+                  
+                  firstName="Hannah"
+                  lastName = "Ford"
+                  message= "yo "
+                  date = "Wed 03, 2021"
+                />
+          <Comments
+                  
+                  firstName="Frank"
+                  lastName = "Amaya"
+                  message= "This blog sucks"
+                  date = "Wed 03, 2021"
+                />
+          
+
+
+          
           {/* Comment Reply*/}
-          <div className="reply py-2">
-            <div className="d-flex">
-              <div className="avatar px-2">
-                <img src={img21} className="rounded" alt=""/>
-              </div>
-              <div className="comment-content">
-                <h5 className="display-2 m-0">John</h5>
-                <p className="title-secondary text-dark">
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                </p>
-              </div> 
-            </div>
-          </div>
-        </div>
+          
         {/* Comment Forum*/}
         <div className="comment-form px-2 container">
           <h3 className="text-center display-1 secondary-title py-2">Leave Comment</h3>
-          <div className="d-flex justify-content-between flex-wrap">
-            <input type="text" className="form-control" placeholder="First Name"/>
-            <input type="text" className="form-control" placeholder="Last Name"/>
-            <input type="email" className="form-control" placeholder="e-mail"/>
+          <div className="d-flex justify-content-between flex-wrap" >
+            <input type="text" id="getCommentFName" className="form-control" placeholder="First Name"/>
+            <input type="text" id="getCommentLName" className="form-control" placeholder="Last Name"/>
+            <input type="email" id="getCommentEmail" className="form-control" placeholder="E-mail"/>
           </div>
-            <textarea class = "form-control mt-3" placeholder="Message" rows="10"></textarea>
+            <textarea id= "getCommentMessage" class = "form-control mt-3" placeholder="Message" rows="10"></textarea>
+            
             <div className="text-center">
-              <button className="btn btn-primary secondary-title text-light mb-3">Submit</button>
+              <button className="btn btn-primary secondary-title text-light mb-3" onClick={this.submit}>Submit</button>
             </div>
             
           

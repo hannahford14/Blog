@@ -1,0 +1,25 @@
+
+2021-08-19 15:50:42:418 INFO  Default limit of open files (512) will be used.
+2021-08-19 15:50:42:436 INFO  Loading configuration from: /Users/hannahford/desktop/Blog/orientdb-3.0.2/config/orientdb-server-config.xml...
+2021-08-19 15:50:42:838 INFO  OrientDB Server v3.0.2 - Veloce (build e47e693f1470a7a642461be26983d4eca70777fd, branch develop) is starting up...
+2021-08-19 15:50:42:872 INFO  8589934592 B/8192 MB/8 GB of physical memory were detected on machine
+2021-08-19 15:50:42:873 INFO  Detected memory limit for current process is 8589934592 B/8192 MB/8 GB
+2021-08-19 15:50:42:874 INFO  JVM can use maximum 2048MB of heap memory
+2021-08-19 15:50:42:875 INFO  Because OrientDB is running outside a container 2g of memory will be left unallocated according to the setting 'memory.leftToOS' not taking into account heap memory
+2021-08-19 15:50:42:876 INFO  OrientDB auto-config DISKCACHE=4,096MB (heap=2,048MB os=8,192MB)
+2021-08-19 15:50:42:883 INFO  Databases directory: /Users/hannahford/Desktop/Blog/orientdb-3.0.2/databases
+2021-08-19 15:50:43:449 INFO  Storage 'plocal:/Users/hannahford/Desktop/Blog/orientdb-3.0.2/databases/OSystem' is opened under OrientDB distribution : 3.0.2 - Veloce (build e47e693f1470a7a642461be26983d4eca70777fd, branch develop)
+2021-08-19 15:50:43:763 INFO  Listening binary connections on 0.0.0.0:2424 (protocol v.37, socket=default)
+2021-08-19 15:50:43:766 INFO  Listening http connections on 0.0.0.0:2480 (protocol v.10, socket=default)
+2021-08-19 15:50:43:776 INFO  Installing dynamic plugin 'orientdb-neo4j-importer-plugin-3.0.2-dist.jar'...
+2021-08-19 15:50:43:790 INFO  Installing dynamic plugin 'orientdb-etl-3.0.2.jar'...
+2021-08-19 15:50:43:797 INFO  Installing dynamic plugin 'orientdb-teleporter-3.0.2.jar'...
+2021-08-19 15:50:43:805 INFO  Installing dynamic plugin 'orientdb-studio-3.0.2.zip'...
+2021-08-19 15:50:43:811 INFO  ODefaultPasswordAuthenticator is active
+2021-08-19 15:50:43:812 INFO  OServerConfigAuthenticator is active
+2021-08-19 15:50:43:813 INFO  OSystemUserAuthenticator is active
+2021-08-19 15:50:43:814 INFO  [OVariableParser.resolveVariables] Property not found: distributed
+2021-08-19 15:50:43:820 WARNI Authenticated clients can execute any kind of code into the server by using the following allowed languages: [sql]
+2021-08-19 15:50:43:822 INFO  OrientDB Studio available at http://10.0.0.19:2480/studio/index.html
+2021-08-19 15:50:43:823 INFO  OrientDB Server is active v3.0.2 - Veloce (build e47e693f1470a7a642461be26983d4eca70777fd, branch develop).
+2021-08-19 15:51:23:448 INFO  Storage 'plocal:/Users/hannahford/Desktop/Blog/orientdb-3.0.2/databases/HannahsBlog' is opened under OrientDB distribution : 3.0.2 - Veloce (build e47e693f1470a7a642461be26983d4eca70777fd, branch develop)

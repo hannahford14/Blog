@@ -41,13 +41,14 @@ class Navbar extends Component {
               <a href="#/" className="nav-link">Pages</a>
               <a href="#/" className="nav-link">Categories</a>
               <a href="#/" className="nav-link">About</a>
-              <a href="#/" className="nav-link">Contact</a>
+              <a href="#/login" className="nav-link">Login</a>
             </ul>
           </div>
 
           {/* <!--collapse on toggle button click--> */}
           <div className="collapse">
             <ul className="navbar-nav">
+           
               <a href="https://www.facebook.com/" className="nav-link"
                 ><i className="fab fa-facebook-f"></i
               ></a>
@@ -63,6 +64,19 @@ class Navbar extends Component {
               <a href="https://www.pinterest.com/" className="nav-link"
                 ><i className="fab fa-pinterest"></i
               ></a>
+              <a href="#/login" className="nav-link"
+                ><i className="fas fa-sign-in-alt"></i
+              ></a>
+              <a href="#/login" className="nav-link"
+                ><i className="fas fa-sign-out-alt"></i
+              ></a>
+
+          
+        
+
+        
+
+             
             </ul>
           </div>
         </nav>
