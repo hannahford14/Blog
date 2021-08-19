@@ -21,4 +21,4 @@ const resolvers = {
   }
 };
 
-moudle.export.resolvers = resolvers;
+module.exports.resolvers = resolvers;

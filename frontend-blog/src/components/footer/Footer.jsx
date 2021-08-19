@@ -120,21 +120,21 @@ class Footer extends Component {
               <h2 className="footer-title secondary-title mt-2">Social</h2>
               <div className="tags social">
                 <div className="d-flex flex-wrap">
-                  <a href="#" className="nav-link btn bg-light"
-                    ><i className="fab fa-facebook-f"></i
-                  ></a>
-                  <a href="#" className="nav-link btn bg-light"
-                    ><i className="fab fa-twitter"></i
-                  ></a>
-                  <a href="#" className="nav-link btn bg-light"
-                    ><i className="fab fa-instagram"></i
-                  ></a>
-                  <a href="#" className="nav-link btn bg-light"
-                    ><i className="fab fa-linkedin"></i
-                  ></a>
-                  <a href="#" className="nav-link btn bg-light"
-                    ><i className="fab fa-pinterest"></i
-                  ></a>
+                <a href="https://www.facebook.com/" className="nav-link"
+                  ><i className="fab fa-facebook-f"></i
+                ></a>
+                <a href="https://twitter.com/" className="nav-link"
+                  ><i className="fab fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/" className="nav-link"
+                  ><i className="fab fa-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/" className="nav-link"
+                  ><i className="fab fa-linkedin"></i
+                ></a>
+                <a href="https://www.pinterest.com/" className="nav-link"
+                  ><i className="fab fa-pinterest"></i
+                ></a>
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ const typeDefs = gql`
     title: String
     image: String
     date: String
-    comments: [comment]
+    comments: [Comment]
   }
 
   type Comment {
@@ -22,7 +22,7 @@ const typeDefs = gql`
   type Query {
     getBlog: Blog
     getCommentsFromBlog: [Comment]
-    getUser: user
+    getUser: User
   }
 
   type Mutation {
@@ -33,7 +33,7 @@ const typeDefs = gql`
 
   schema {
     query: Query
-    muatation: Mutation
+    mutation: Mutation
   }
 `;
 

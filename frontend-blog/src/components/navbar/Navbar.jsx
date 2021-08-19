@@ -36,12 +36,12 @@ class Navbar extends Component {
           {/* <!--collapse on toggle button click--> */}
           <div className="collapse">
             <ul className="navbar-nav">
-              <a href="/App.js" className="nav-link">Home</a>
-              <a href="/App.js" className="nav-link">Blog</a>
-              <a href="#" className="nav-link">Pages</a>
-              <a href="#" className="nav-link">Categories</a>
-              <a href="#" className="nav-link">About</a>
-              <a href="#" className="nav-link">Contact</a>
+              <a href="#/" className="nav-link">Home</a>
+              <a href="#/blog" className="nav-link">Blog</a>
+              <a href="#/" className="nav-link">Pages</a>
+              <a href="#/" className="nav-link">Categories</a>
+              <a href="#/" className="nav-link">About</a>
+              <a href="#/" className="nav-link">Contact</a>
             </ul>
           </div>
 
