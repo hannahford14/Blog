@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
-import Blog from '../../components/blog/Blog'
-
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import img15 from '../../photos/hair.jpg'; 
 import img16 from '../../photos/decor.jpg'; 
 import img17 from '../../photos/makeup.jpg'; 

@@ -5,17 +5,11 @@ import BlogPage from './pages/blog-page/BlogPage';
 import Footer from './components/footer/Footer';
 import './App.css';
 
-// props = {
-//   image: imgN,
-//   description: 
-// }
-
 class App extends Component {
   render(){
     return (
       <div className="App">
         <BlogPage/>
-       
       </div>
       
     );
