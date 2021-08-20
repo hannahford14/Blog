@@ -8,14 +8,12 @@ class Blog extends Component {
         <article className="article">
           <div className="card">
             <div className="overflow-img">
-              <a href="#">
+              <a href="/">
                 <img src={this.props.image} className="img-fluid" alt="" />
               </a>
             </div>
             <div className="card-body text-center px-1">
-              <a 
-                href="#" className="text-title display-1 text-dark"
-              >
+              <a href="/" className="text-title display-1 text-dark">
                 {this.props.description}
               </a>
               <p className="secondary-title text-secondary display-3">

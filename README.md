@@ -19,3 +19,9 @@ Manually start Orient DB
 4. CD to bin
 5. enter the following in the command line: ./server.sh
 6. http://localhost:2480/studio/index.html#/
+
+Troubleshooting react not updating properly:
+  $ sudo rm -fr node_modules/ package-lock.json
+  $ sudo npm cache clean --force
+  $ sudo npm i react-scripts --unsafe-perm
+  $ sudo npm i --unsafe-perm

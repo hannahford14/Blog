@@ -1,5 +1,7 @@
+const { GraphQLDateTime } = require('graphql-iso-date');
+
 const {
-  getBlog,
+  getBlogsForHome,
   getCommentsFromBlog,
   getUser,
   createBlog,
@@ -9,7 +11,7 @@ const {
 
 const resolvers = {
   Query: {
-    getBlog,
+    getBlogsForHome,
     getCommentsFromBlog,
     getUser
   },

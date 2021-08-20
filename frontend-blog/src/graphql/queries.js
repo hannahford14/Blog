@@ -1,16 +1,16 @@
-import { gql } from "apollo-boost";
+import { gql } from "@apollo/client";
 
 // Query to get blog by key
-export const GET_BLOG =
-  gql`query getBlog {
-    getBlog{
+export const GET_BLOGS_FOR_HOME =
+  gql`query getBlogsForHome {
+    getBlogsForHome{
       date
-      description
       image
       rid {
         cluster
         position
       }
       title
+      comments
     }
   }`;

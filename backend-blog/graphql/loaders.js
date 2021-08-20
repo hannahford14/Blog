@@ -59,10 +59,24 @@ const createUser = (root, {}) => {
   }
 }
 
-const getBlog = async (root, {}) => {
+const getBlogsForHome = async (root, {}) => {
   let db = await pool.acquire();
+
   try {
-    let result = await db.query(`SELECT * FROM Blog`).one();
+    let query = `
+      SELECT rid, title, image, date, comments FROM (
+        MATCH {class: Blog, as: blog}.out("hasComment"){class: Comment, as: comment}
+        RETURN
+            blog.@rid as rid,
+            blog.title as title,
+            blog.image as image,
+            blog.date as date,
+            count(comment.message) as comments GROUP BY rid
+      );
+    `;
+
+    let result = await db.query(query).all();
+    
     return result; 
   } catch (err) {
     logError(err);
@@ -112,6 +126,6 @@ const getUser = (root, {}) => {
 module.exports.createBlog = createBlog;
 module.exports.createComment = createComment;
 module.exports.createUser = createUser;
-module.exports.getBlog = getBlog;
+module.exports.getBlogsForHome = getBlogsForHome;
 module.exports.getCommentsFromBlog = getCommentsFromBlog;
 module.exports.getUser = getUser;

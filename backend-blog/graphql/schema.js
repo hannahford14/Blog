@@ -1,4 +1,4 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   scalar DateTime
@@ -10,6 +10,14 @@ const typeDefs = gql`
     genre: String
     description: String
     comments: [Comment]
+  }
+
+  type BlogDescription {
+    rid: RecordID
+    title: String
+    image: String
+    date: String
+    comments: Int
   }
 
   type Comment {
@@ -24,8 +32,13 @@ const typeDefs = gql`
     email: String
   }
 
+  type RecordID {
+    cluster: Int
+    position: Int
+  }
+
   type Query {
-    getBlog: Blog
+    getBlogsForHome: [BlogDescription]
     getCommentsFromBlog: [Comment]
     getUser: User
   }

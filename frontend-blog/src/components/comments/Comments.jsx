@@ -5,8 +5,6 @@ import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 import img20 from '../../photos/image.png'; 
 import img21 from '../../photos/sample-profile-pic.png'; 
-import Avatar from '@material-ui/core/Avatar';
-import { makeStyles } from '@material-ui/core/styles';
 
 
 class Comments extends Component {

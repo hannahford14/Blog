@@ -3,6 +3,8 @@ const { typeDefs } = require('./graphql/schema');
 const { resolvers } = require('./graphql/resolvers');
 const express = require('express');
 const http = require('http');
+var cors = require('cors');
+var bodyParser = require('body-parser');
 
 const config = {
   port: 4000,
@@ -12,6 +14,11 @@ const config = {
 const apollo = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
+
+app.use(cors());
+
+//support parsing of application/json type post data
+app.use(bodyParser.json());
 
 apollo.applyMiddleware({ app });
 
