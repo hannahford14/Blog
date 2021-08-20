@@ -22,14 +22,6 @@ const client = new ApolloClient({
 
 class BlogPage extends Component {
 
-  async componentDidMount(){
-    let result = await client.query({
-      query: GET_BLOGS_FOR_HOME
-    });
-
-    console.log(result);
-  }
-
   submit = () => {
     console.log(document.getElementById("getCommentFName").value);
     console.log(document.getElementById("getCommentLName").value);
@@ -81,8 +73,6 @@ class BlogPage extends Component {
             
               </div>
             </article>
-
-              {/* Blog Footer*/}
               <div className="post-footer mb-3">
                 <div className="post-tags d-flex flex-wrap justify-content-center">
                   <a href="#" className="nav-link btn bg-light">Travel</a>
@@ -107,18 +97,14 @@ class BlogPage extends Component {
                     </p>
                     <div className="post-footer mb-3">
                       <div className="post-tags d-flex flex-wrap justify-content-center">
-                        <a href="https://pt-br.facebook.com/GreysonIsMyBoo/photos" className="nav-link"><i className="fab fa-facebook-f"></i></a>
+                        <a href="https://facebook.com/" className="nav-link"><i className="fab fa-facebook-f"></i></a>
                         <a href="https://www.linkedin.com/in/hannah-ford-4313a2149" className="nav-link"><i className="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/hannahford14?lang=en" className="nav-link"><i className="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/hannahford14/" className="nav-link"><i className="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" className="nav-link"><i className="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" className="nav-link"><i className="fab fa-instagram"></i></a>
                       </div>
                 </div>
-            
               </div>
               </div>
-              
-                
-              {/* Blog Footer*/}
             
             {/*Comments*/}
             <div className="post-comments py-2 container">
@@ -167,15 +153,7 @@ class BlogPage extends Component {
         </main>
 
         <Footer
-          image1={img15}
-          image2={img16}
-          image3={img17}
-          text1="Feature 1 post"
-          text2="Feature 1 post"
-          text3="Feature 1 post"
-          date1="Thur 07, 2021"
-          date2="Friday 08, 2021"
-          date3="Thur 02, 2021"
+          featured={[]}
         /> 
       </div>
     );

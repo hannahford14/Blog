@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Feature from '../feature/Feature';
+import _ from 'lodash';
 import './Footer.css';
 import '../../App.css'
 
@@ -31,79 +33,22 @@ class Footer extends Component {
             </div>
             <div className="col-3">
               <h2 className="footer-title secondary-title">Feature Post</h2>
-              <div className="feature-post">
-                <div className="flex-item">
-                  <article className="article">
-                    <div className="d-flex">
-                      <a href="#">
-                        <img
-                          src={this.props.image1}
-                          className="object-fit px-1"
-                          alt=""
-                        />
-                        <div className="px-1">
-                          <a href="#" className="text-title display-2"
-                            >{this.props.text1}
-                          </a>
-                          <p className="secondary-title text-secondary display-3">
-                            <span
-                              ><i className="far fa-clock text-primary"></i>
-                              {this.props.date1}
-                            </span>
-                          </p>
-                        </div>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-                <div className="flex-item">
-                  <article className="article">
-                    <div className="d-flex">
-                      <a href="#">
-                        <img
-                          src={this.props.image2}
-                          className="object-fit px-1"
-                          alt=""
-                        />
-                        <div className="px-1">
-                          <a href="#" className="text-title display-2"
-                            >{this.props.text2}
-                          </a>
-                          <p className="secondary-title text-secondary display-3">
-                            <span
-                              ><i className="far fa-clock text-primary"></i>{this.props.date2}
-                              </span>
-                          </p>
-                        </div>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-                <div className="flex-item">
-                  <article className="article">
-                    <div className="d-flex">
-                      <a href="#">
-                        <img
-                          src={this.props.image3}
-                          className="object-fit px-1"
-                          alt=""
-                        />
-                        <div className="px-1">
-                          <a href="#" className="text-title display-2"
-                            >{this.props.text3}
-                          </a>
-                          <p className="secondary-title text-secondary display-3">
-                            <span
-                              ><i className="far fa-clock text-primary"></i>
-                              {this.props.date3}
-                            </span>
-                          </p>
-                        </div>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-              </div>
+              {
+                !_.isEmpty(this.props.featured) ? 
+                  Object.values(this.props.featured).map((key) => {
+                    return(
+                      <Feature
+                        key={`${key.image}-Footer`}
+                        image={key.image}
+                        title={key.title}
+                        date={key.date}
+                      />
+                    );
+                  }) :
+                  <p className="mt-2">
+                    "No Featured Posts"
+                  </p>
+              } 
             </div>
             <div className="col-3">
               <h2 className="footer-title secondary-title">Tags</h2>

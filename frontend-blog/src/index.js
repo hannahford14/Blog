@@ -22,10 +22,10 @@ ReactDOM.render(
     <HashRouter>
       <Switch>
         <Route exact path="/" name="Home Page" component={Home}/> 
-        <Route exact path="/blog" name="blog" component={Blog}/>
-        <Route exact path="/login" name="blog" component={Login}/>
-        <Route exact path="/createBlog" name="blog" component={CreateBlog}/>
-        <Route exact path="/createAccount" name="blog" component={CreateAccount}/>
+        <Route path="/blog" name="Blog" component={Blog}/>
+        <Route exact path="/login" name="Login" component={Login}/>
+        <Route exact path="/createBlog" name="Create Blog" component={CreateBlog}/>
+        <Route exact path="/createAccount" name="Create Account" component={CreateAccount}/>
       </Switch>
     </HashRouter>
   </ApolloProvider>,
