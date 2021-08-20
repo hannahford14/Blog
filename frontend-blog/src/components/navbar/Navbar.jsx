@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Navbar.css';
 import '../../App.css'
+import CreateBlog from '../../components/blog/Blog'
 
 class Navbar extends Component {
   constructor(props) {
@@ -37,11 +38,11 @@ class Navbar extends Component {
           <div className="collapse">
             <ul className="navbar-nav">
               <a href="#/" className="nav-link">Home</a>
-              <a href="#/blog" className="nav-link">Blog</a>
-              <a href="#/" className="nav-link">Pages</a>
-              <a href="#/" className="nav-link">Categories</a>
-              <a href="#/" className="nav-link">About</a>
-              <a href="#/login" className="nav-link">Login</a>
+              <a href="#/blog" className="nav-link">Featured Blog</a>
+             
+              <a href="#/createBlog" className="nav-link">Create Blog</a>
+              <a href="#/createAccount" className="nav-link">Create Account</a>
+              
             </ul>
           </div>
 

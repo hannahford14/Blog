@@ -31,7 +31,7 @@ class HomePage extends Component {
           <Navbar/>
         </header>
         {/* Header */}
-      
+        
         {/*Main Site*/}
         <main id="site-main">
         {/*BLog Post Section*/}
@@ -99,9 +99,7 @@ class HomePage extends Component {
             </ResponsiveMasonry>
             <div className="container">
               <div className="text-center">
-                <button className="btn btn-primary secondary-title text-light">
-                  Load More Posts...
-                </button>
+                
               </div>
             </div>
           </section>
