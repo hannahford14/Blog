@@ -12,11 +12,8 @@ import { makeStyles } from '@material-ui/core/styles';
 class Comments extends Component {
   render(){
     
-
     return (
-       
-        
-         
+ 
           <div className="comment-item py-2 form-control-comment">
             <div className="d-flex">
             
@@ -27,9 +24,9 @@ class Comments extends Component {
             </div>
 
               </div>
-              <div className="comment-content">
+              <div className="comment-content border">
                 <h5 className="display-2 m-0">{`${this.props.firstName} ${this.props.lastName}`} </h5>
-                <p className="title-secondary text-dark">
+                <p className="title-secondary text-dark border">
                   {this.props.message}
                   
                 </p>

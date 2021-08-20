@@ -3,3 +3,19 @@ loginPage {
   margin-top: 30px;
   width: 1000px;
 }
+
+.login-button {
+  margin-right: px;
+  margin-left: 2px;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.create-account-button {
+  display: flex;
+  margin-left: 100px;
+  margin-top: -50px;
+}
